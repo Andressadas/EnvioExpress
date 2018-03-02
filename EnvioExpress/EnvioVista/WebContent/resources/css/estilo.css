@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+.titulo {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.etiqueta1 {
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.etiqueta2 {
+	font-weight: bold;
+	font-size: 18px;
+	color: gray;
+}
+
+.etiqueta3 {
+	font-weight: bold;
+	font-size: 18px;
+	color: maroon;
+}
+
+.columnas {
+	width:50%
+}
+#titulos {
+	color:#2779AA;
+	font-weight: bold;
+}

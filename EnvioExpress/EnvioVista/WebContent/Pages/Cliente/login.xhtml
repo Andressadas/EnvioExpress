@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core">
+	
+	<p:ajaxStatus>
+		<h:graphicImage value="/resources/imagenes/error.jpg" style="height: 149px; "/>
+	</p:ajaxStatus>
+	
+<h:head>
+    <h:outputStylesheet library="css" name="/resources/css/estilo.css" />
+	<title>Login </title>
+</h:head>
+
+<h:body>
+    <p:growl id="growl"  life="3000" />
+	<p:messages globalOnly="true" id="men" autoUpdate="true" />
+    <f:loadBundle var="msg" basename="resources/application" />
+	<h:form>
+	<p:messages globalOnly="true" id="men_Add_login" autoUpdate="true" />
+	
+		<p:panel header="Login">
+			<h:panelGrid columns="1" id="container">
+			
+			    <!-- Campo que cactura el nombre de usuario -->
+				<h:outputLabel value="#{msg.USERNAME}" style="font-weight:bold" />
+				<h:inputText value="#{EmpleadoManagedBean.empleado.username}" maxlength="15" />
+
+                <!-- Campo que cactura el password -->
+				<h:outputLabel value="#{msg.PASSWORD}" style="font-weight:bold" />
+				<h:inputSecret value="#{EmpleadoManagedBean.empleado.password}" maxlength="15" />
+				
+                <!-- Boton para realizar el Login -->
+				<h:commandButton icon="ui-icon-extlink" value="#{msg.LOGIN}" ajax="true" action="#{EmpleadoManagedBean.login()}" />
+
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+	 
+</h:body>
+
+</html>
